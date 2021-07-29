@@ -4,7 +4,7 @@ services:
     container_name: db-chamelo
     image: mysql:8.0
     ports:
-      - "3306:3306"
+      - "2000:3306"
     volumes:
       #- $PWD/db-data:/var/lib/mysql
       - ./db-data:/var/lib/mysql
@@ -21,7 +21,7 @@ services:
     depends_on:
       - db
     ports:
-      - "1010:80"
+      - "2002:80"
     volumes:
       #- "$PWD/web:/var/www/html"
       #- "$PWD/httpd.conf:/etc/httpd/conf/httpd.conf"
