@@ -22,9 +22,29 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
-                        <a class="nav-link" href="{{route('productos')}}">Productos</a>
+                    <div class="navbar-nav nav-tabs">
+                        <a class="nav-link active" aria-current="page" href="{{route('home')}}">Boleta</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Productos</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="{{route('ver_productos')}}">Ver Productos</a></li>
+                              <li><a class="dropdown-item" href="{{route('agregar_producto')}}">Agregar Producto</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Proveedores</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="{{route('ver_proveedores')}}">Ver Proveedores</a></li>
+                              <li><a class="dropdown-item" href="#">Agregar Proveedor</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Empresas</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="{{route('ver_empresas')}}">Ver Empresas</a></li>
+                              <li><a class="dropdown-item" href="#">Agregar Empresa</a></li>
+                            </ul>
+                        </li>
                     </div>
                 </div>
             </div>
@@ -37,6 +57,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="{{asset('js/axios_config.js')}}"></script>
 
