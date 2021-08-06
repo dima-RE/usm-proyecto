@@ -8,14 +8,12 @@
                     <tr>
                         <td>Codigo</td>
                         <td>Nombre</td>
-                        <td>Categoría</td>
-                        <td>Proveedor</td>
-                        <td>Precio</td>
-                        <td>Stock</td>
-                        <td>Detalle</td>
+                        <td>Empresa</td>
+                        <td>Fono</td>
+                        <td>Acción</td>
                     </tr>
                 </thead>
-                <tbody id="tbody-productos">
+                <tbody id="tbody-proveedores">
 
                 </tbody>
             </table>

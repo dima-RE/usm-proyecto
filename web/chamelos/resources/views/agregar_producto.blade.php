@@ -11,12 +11,12 @@
 
                 <div class="card-body">
                     <div class="mb-3">
-                        <label for="txt-codigo" class="form-label">Codigo del Producto</label>
+                        <label for="txt-codigo" class="form-label">Código</label>
                         <input type="number" class="form-control" id="txt-codigo">
                     </div>
 
                     <div class="mb-3">
-                        <label for="txt-nombre" class="form-label">Nombre del producto</label>
+                        <label for="txt-nombre" class="form-label">Nombre</label>
                         <input class="form-control" id="txt-nombre" type="text">
                     </div>
 

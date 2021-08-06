@@ -6,16 +6,15 @@
             <table class="table table-hover table-bordered table-striped table-responsive">
                 <thead class="bg-warning">
                     <tr>
-                        <td>Codigo</td>
+                        <td>R.U.T.</td>
                         <td>Nombre</td>
-                        <td>Categoría</td>
-                        <td>Proveedor</td>
-                        <td>Precio</td>
-                        <td>Stock</td>
-                        <td>Detalle</td>
+                        <td>Dirección</td>
+                        <td>Fono</td>
+                        <td>Email</td>
+                        <td>Acción</td>
                     </tr>
                 </thead>
-                <tbody id="tbody-productos">
+                <tbody id="tbody-empresas">
 
                 </tbody>
             </table>

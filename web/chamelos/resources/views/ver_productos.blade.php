@@ -12,7 +12,7 @@
                         <td>Proveedor</td>
                         <td>Precio</td>
                         <td>Stock</td>
-                        <td>Detalle</td>
+                        <td>Acción</td>
                     </tr>
                 </thead>
                 <tbody id="tbody-productos">

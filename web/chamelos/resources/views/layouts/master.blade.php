@@ -7,6 +7,7 @@
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 
     <title>Chamelo's</title>
 </head>
@@ -16,7 +17,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid bg-warning">
                 <a href="{{route('home')}}" class="navbar-brand">
-                    <img src="{{asset('img/logo.png')}}" alt="logo.png">
+                    <img class="logo" src="{{asset('img/logo.png')}}" alt="logo.png">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,14 +36,14 @@
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Proveedores</a>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="{{route('ver_proveedores')}}">Ver Proveedores</a></li>
-                              <li><a class="dropdown-item" href="#">Agregar Proveedor</a></li>
+                              <li><a class="dropdown-item" href="{{route('agregar_proveedor')}}">Agregar Proveedor</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Empresas</a>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="{{route('ver_empresas')}}">Ver Empresas</a></li>
-                              <li><a class="dropdown-item" href="#">Agregar Empresa</a></li>
+                              <li><a class="dropdown-item" href="{{route('agregar_empresa')}}">Agregar Empresa</a></li>
                             </ul>
                         </li>
                     </div>
