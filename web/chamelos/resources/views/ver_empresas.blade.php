@@ -21,3 +21,8 @@
         </div>
     </div>
 @endsection
+
+@section('javascript')
+    <script src="{{asset('js/ver_empresas.js')}}"></script>
+    <script src="{{asset('js/empresaService.js')}}"></script>
+@endsection
