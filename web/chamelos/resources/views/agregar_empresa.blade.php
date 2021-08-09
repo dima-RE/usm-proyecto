@@ -12,7 +12,7 @@
                 <div class="card-body">
                     <div class="mb-3">
                         <label for="txt-codigo" class="form-label">R.U.T.</label>
-                        <input type="text" class="form-control" id="txt-codigo">
+                        <input type="text" class="form-control" id="txt-codigo" placeholder="12.345.678-9">
                     </div>
 
                     <div class="mb-3">
@@ -27,7 +27,7 @@
 
                     <div class="mb-3">
                         <label for="txt-fono" class="form-label">Fono</label>
-                        <input type="number" class="form-control" id="txt-fono" placeholder="123456789">
+                        <input type="number" class="form-control" id="txt-fono" placeholder="+56 9 1234 5678">
                     </div>
 
                     <div class="mb-3">

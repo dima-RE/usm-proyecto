@@ -18,7 +18,7 @@ class CreateTableEmpresas extends Migration
             $table->string("id_empresa",12);
             $table->string("nom_empresa",200);
             $table->string("dir_empresa",200);
-            $table->integer("fono_empresa")->unsigned();
+            $table->string("fono_empresa");
             $table->string("email_empresa",100);
             $table->tinyInteger("estado")->default(1);
 
