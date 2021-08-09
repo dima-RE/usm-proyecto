@@ -1,3 +1,4 @@
+const tabla = document.querySelector("#table-empresas");
 
 const cargarTabla = async(empresas)=>{
     let tbody = document.querySelector("#tbody-empresas");
@@ -8,22 +9,27 @@ const cargarTabla = async(empresas)=>{
         let tr = document.createElement("tr");
 
         let tdRut = document.createElement("td");
-        tdRut.innerText = empresas[i].rut;
+        tdRut.innerText = empresas[i].id_empresa;
 
         let tdNombre = document.createElement("td");
-        tdNombre.innerText = empresas[i].nombre;
+        tdNombre.innerText = empresas[i].nom_empresa;
 
         let tdDir = document.createElement("td");
-        tdDir.innerText = empresas[i].direccion;
+        tdDir.innerText = empresas[i].dir_empresa;
 
         let tdFono = document.createElement("td");
-        tdFono.innerText = empresas[i].fono; 
+        tdFono.innerText = empresas[i].fono_empresa; 
 
         let tdEmail = document.createElement("td");
-        tdEmail.innerText = empresas[i].email;
+        tdEmail.innerText = empresas[i].email_empresa;
 
         let tdAccion = document.createElement("td");
-        tdAccion.innerText = empresas[i].estado;
+        // Agregar boton "Suspender" o "Habilitar"
+        if(empresas[i].estado == 1){
+            tdAccion.innerText = "Vigente";
+        }else{
+            tdAccion.innerText = "Suspendido";
+        }
         
         tr.appendChild(tdRut);
         tr.appendChild(tdNombre);
@@ -39,4 +45,14 @@ const cargarTabla = async(empresas)=>{
 document.addEventListener("DOMContentLoaded", async()=>{
     let empresas = await getEmpresas();
     cargarTabla(empresas);
+    
+    //Sortable.initTable(tabla);
+
+    /*let ino = tabla.getElementsByTagName("th");
+    console.log(ino[0]);
+    table.ino[0].setAttribute("aloh","wee");
+    tabla.addEventListener("Sortable.sorted", ()=>{
+        console.log("Funciona");
+    });*/
+    
 });

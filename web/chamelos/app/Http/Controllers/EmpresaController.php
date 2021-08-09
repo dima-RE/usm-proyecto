@@ -20,7 +20,6 @@ class EmpresaController extends Controller
         $empresa->dir_empresa = $input["direccion"];
         $empresa->fono_empresa = $input["fono"];
         $empresa->email_empresa = $input["email"];
-        $empresa->estado = $input["estado"];
         $empresa->save();
         return $empresa;
     }

@@ -15,21 +15,17 @@ document.querySelector("#btn-agregar").addEventListener("click", async()=>{
             errores.push("La empresa ya existe.");
         };
     };
-
     if(nombre == ""){
         errores.push("Debe ingresar un nombre.");
     };
-
     if(direccion == ""){
         errores.push("Debe ingresar una dirección.");
     };
-
     if(isNaN(fono)){
         errores.push("El fono debe ser numérico.");
-    }else if(fono.toString().length < 12){
+    }else if(fono.toString().length != 12){
         errores.push("El fono debe tener 9 dígitos más el prefijo.");
     };
-
     if(email == ""){
         errores.push("Debe ingresar un correo.")
     };
@@ -41,10 +37,9 @@ document.querySelector("#btn-agregar").addEventListener("click", async()=>{
         empresa.direccion = direccion;
         empresa.fono = fono;
         empresa.email = email;
-        empresa.estado = 1;
 
         let res = await postEmpresa(empresa);
-        await Swal.fire("Registro exitoso","La empresa ha sido registrada exitosamente","success")
+        await Swal.fire("Registro exitoso","La empresa ha sido registrada exitosamente","success");
     }else{
         Swal.fire({
             title: 'Errores de validación',

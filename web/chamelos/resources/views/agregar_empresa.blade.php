@@ -27,7 +27,7 @@
 
                     <div class="mb-3">
                         <label for="txt-fono" class="form-label">Fono</label>
-                        <input type="number" class="form-control" id="txt-fono" placeholder="+56 9 1234 5678">
+                        <input type="number" class="form-control" id="txt-fono" placeholder="+56912345678">
                     </div>
 
                     <div class="mb-3">

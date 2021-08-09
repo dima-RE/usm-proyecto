@@ -12,7 +12,7 @@
                 <div class="card-body">
                     <div class="mb-3">
                         <label for="txt-codigo" class="form-label">Código</label>
-                        <input type="number" class="form-control" id="txt-codigo">
+                        <input type="text" class="form-control" id="txt-codigo">
                     </div>
 
                     <div class="mb-3">
@@ -29,7 +29,7 @@
 
                     <div class="mb-3">
                         <label for="txt-fono" class="form-label">Fono</label>
-                        <input type="number" class="form-control" id="txt-fono" placeholder="123456789">
+                        <input type="number" class="form-control" id="txt-fono" placeholder="+56912345678">
                     </div>
 
                     <div class="card-footer d-grid gap-1">
@@ -39,5 +39,12 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('javascript')
     
+    <script src="{{asset('js/services/proveedorService.js')}}"></script>
+    <script src="{{asset('js/services/empresaService.js')}}"></script>
+    <script src="{{asset('js/agregar_proveedor.js')}}"></script>
+
 @endsection
