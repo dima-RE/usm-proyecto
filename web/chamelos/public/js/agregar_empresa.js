@@ -1,9 +1,9 @@
 document.querySelector("#btn-agregar").addEventListener("click", async()=>{
-    let rut = document.querySelector("#txt-codigo").value;
-    let nombre = document.querySelector("#txt-nombre").value;
-    let direccion = document.querySelector("#txt-direccion").value;
-    let fono = document.querySelector("#txt-fono").value;
-    let email = document.querySelector("#txt-email").value;
+    let rut = document.querySelector("#txt-codigo").value.trim();
+    let nombre = document.querySelector("#txt-nombre").value.trim();
+    let direccion = document.querySelector("#txt-direccion").value.trim();
+    let fono = document.querySelector("#txt-fono").value.trim();
+    let email = document.querySelector("#txt-email").value.trim();
 
     let empresa = {};
     empresa.rut = rut;

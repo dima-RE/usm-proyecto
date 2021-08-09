@@ -46,6 +46,6 @@
 @endsection
 
 @section('javascript')
-    <script src="{{asset('js/empresaService.js')}}"></script>
+    <script src="{{asset('js/services/empresaService.js')}}"></script>
     <script src="{{asset('js/agregar_empresa.js')}}"></script>
 @endsection
