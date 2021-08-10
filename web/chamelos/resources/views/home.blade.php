@@ -14,6 +14,10 @@
                         <input type="number" class="form-control" id="txt-codigo">
                     </div>
 
+                    <div class="d-grid gap-1">
+                        <button id="btn-buscar" type="button" class="btn btn-info">Buscar</button>
+                    </div>
+
                     <div class="mb-3">
                         <label for="txt-nombre" class="form-label">Nombre del producto</label>
                         <input class="form-control-plaintext" id="txt-nombre" type="text" placeholder="Traer nombre" readonly>
@@ -59,6 +63,8 @@
 
 @section('javascript')
 
-    <script src="{{asset('js/services/productoService')}}"></script>
+    <script src="{{asset('js/services/productoService.js')}}"></script>
+    <script src="{{asset('js/services/ventaService.js')}}"></script>
+    <script src="{{asset('js/home.js')}}"></script>
 
 @endsection

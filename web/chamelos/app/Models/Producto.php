@@ -13,4 +13,8 @@ class Producto extends Model
     public function proveedor(){
         return $this->belongsTo("App\Models\Proveedor","id_proveedor");
     }
+
+    public function ventas(){
+        return $this->hasMany("App\Models\Det_Venta", "cod_producto");
+    }
 }
