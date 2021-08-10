@@ -1,5 +1,3 @@
-const tabla = document.querySelector("#table-proveedores");
-
 const cargarTabla = async(proveedores)=>{
     let tbody = document.querySelector("#tbody-proveedores");
     tbody.innerHTML = "";
@@ -15,7 +13,9 @@ const cargarTabla = async(proveedores)=>{
         tdNombre.innerText = proveedores[i].nom_proveedor;
         
         let tdEmpresa = document.createElement("td");
-        tdEmpresa.innerText = proveedores[i].id_empresa;
+        let empresas = await getEmpresas();
+        let finded = empresas.find(e=>e.id_empresa === proveedores[i].id_empresa);
+        tdEmpresa.innerText = finded.nom_empresa;
 
         let tdFono = document.createElement("td");
         tdFono.innerText = proveedores[i].fono_proveedor; 
@@ -40,5 +40,6 @@ const cargarTabla = async(proveedores)=>{
 
 document.addEventListener("DOMContentLoaded", async()=>{
     let proveedores = await getProveedores();
-    cargarTabla(proveedores); 
+    cargarTabla(proveedores);
+    new Tablesort(document.getElementById('table-proveedores'));
 });

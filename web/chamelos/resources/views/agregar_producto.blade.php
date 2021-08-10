@@ -21,8 +21,8 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="select-categoría" class="formlabel">Categoría</label>
-                        <select id="select-categoría" class="form-select">
+                        <label for="select-categoria" class="formlabel">Categoría</label>
+                        <select id="select-categoria" class="form-select">
                             
                         </select>
                     </div>
@@ -57,4 +57,10 @@
         </div>
     </div>
     
+@endsection
+
+@section('javascript')
+    <script src="{{asset('js/services/productoService.js')}}"></script>
+    <script src="{{asset('js/services/proveedorService.js')}}"></script>
+    <script src="{{asset('js/agregar_producto.js')}}"></script>
 @endsection

@@ -23,10 +23,8 @@
 
 @section('javascript')
     <script src="{{asset('js/services/proveedorService.js')}}"></script>
+    <script src="{{asset('js/services/empresaService.js')}}"></script>
     <script src="{{asset('js/ver_proveedores.js')}}"></script>
 
     <script src="{{asset('vendor/tablesort-gh-pages/dist/tablesort.min.js')}}"></script>
-    <script>
-        new Tablesort(document.getElementById('table-proveedores'));
-    </script>
 @endsection

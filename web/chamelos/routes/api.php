@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,13 @@ Route::post("empresas/post",[EmpresaController::class,"postEmpresa"]);
 Route::get("proveedores/get",[ProveedorController::class,"getProveedores"]);
 Route::post("proveedores/post",[ProveedorController::class,"postProveedor"]);
 // Producto
-
+Route::get("productos/get",[ProductoController::class,"getProductos"]);
+Route::post("productos/post",[ProductoController::class,"postProducto"]);
+Route::get("categorias/get",[ProductoController::class,"getCategorias"]); // Temporal para Prueba Inicial
 // Boleta
+
+// -> Separacion en Encabezado y Detalle en el proyecto a futuro
+// Categorias
+// -> Parte del proyecto a futuro
+// Local
+// -> Datos locales de la tienda para el proyecto a futuro

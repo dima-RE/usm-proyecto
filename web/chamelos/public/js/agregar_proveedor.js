@@ -3,7 +3,11 @@ const cargarEmpresas = async()=>{
     empSelect = document.querySelector("#select-empresa");
     empresas.forEach(e=>{
         let option = document.createElement("option");
+        let valor = document.createAttribute("value");
+        valor.value = e.id_empresa;
+        //agregar atributo value=""
         option.innerText = e.nom_empresa;
+        option.setAttributeNode(valor);
         empSelect.appendChild(option);
     });
 };
@@ -23,7 +27,7 @@ document.querySelector("#btn-agregar").addEventListener("click", async()=>{
         errores.push("Debe ingresar el codigo.");
     }else{
         let codes = await getProveedores();
-        let finded = codes.finded(p=>p.id_proveedor.toUpperCase() === codigo.toUpperCase());
+        let finded = codes.find(p=>p.id_proveedor.toUpperCase() === codigo.toUpperCase());
         if(finded != undefined){
             errores.push("El vendedor ya existe.");
         };
@@ -43,7 +47,6 @@ document.querySelector("#btn-agregar").addEventListener("click", async()=>{
         proveedor.nombre = nombre;
         proveedor.empresa = empresa;
         proveedor.fono = fono;
-        proveedor.estado = 1;
 
         let res = await postProveedor(proveedor);
         await Swal.fire("Registro exitoso","El proveedor ha sido registrado satisfactoriamente","success");

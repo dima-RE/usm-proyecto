@@ -1,5 +1,3 @@
-const tabla = document.querySelector("#table-empresas");
-
 const cargarTabla = async(empresas)=>{
     let tbody = document.querySelector("#tbody-empresas");
     tbody.innerHTML = "";
@@ -46,13 +44,5 @@ document.addEventListener("DOMContentLoaded", async()=>{
     let empresas = await getEmpresas();
     cargarTabla(empresas);
     
-    //Sortable.initTable(tabla);
-
-    /*let ino = tabla.getElementsByTagName("th");
-    console.log(ino[0]);
-    table.ino[0].setAttribute("aloh","wee");
-    tabla.addEventListener("Sortable.sorted", ()=>{
-        console.log("Funciona");
-    });*/
-    
+    new Tablesort(document.getElementById('table-empresas'));
 });

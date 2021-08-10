@@ -35,8 +35,5 @@
     -->
     
     <script src="{{asset('vendor/tablesort-gh-pages/dist/tablesort.min.js')}}"></script>
-    <script>
-        new Tablesort(document.getElementById('table-empresas'));
-    </script>
 
 @endsection
