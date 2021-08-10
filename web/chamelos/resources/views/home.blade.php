@@ -47,7 +47,7 @@
                           <th>Opción</th>
                         </tr>
                       </thead>
-                      <tbody id="tabla-tbody">
+                      <tbody id="tbody-venta">
                         
                       </tbody>
                     </table>
@@ -55,4 +55,10 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('javascript')
+
+    <script src="{{asset('js/services/productoService')}}"></script>
+
 @endsection
