@@ -9,6 +9,7 @@ class Empresa extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    protected $table = "Empresas";
 
     public function proveedores(){
         return $this->hasMany("App\Models\Proveedor", "id_empresa");

@@ -21,20 +21,48 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// pasar links plural a unico
+
 // Empresa
 Route::get("empresas/get",[EmpresaController::class,"getEmpresas"]);
 Route::post("empresas/post",[EmpresaController::class,"postEmpresa"]);
+// POST = Modificar
+// POST = Eliminar
+
 // Proveedor
 Route::get("proveedores/get",[ProveedorController::class,"getProveedores"]);
 Route::post("proveedores/post",[ProveedorController::class,"postProveedor"]);
+// POST = Modificar
+// POST = Eliminar
+
 // Producto
 Route::get("productos/get",[ProductoController::class,"getProductos"]);
 Route::post("productos/post",[ProductoController::class,"postProducto"]);
-Route::get("categorias/get",[ProductoController::class,"getCategorias"]); // Temporal para Prueba Inicial
-// Boleta
+// POST = Modificar
+// POST = Eliminar
+// GET = Informe Critico --> Productos bajo stock. Transformar informe a pdf
 
-// -> Separacion en Encabezado y Detalle en el proyecto a futuro
 // Categorias
-// -> Parte del proyecto a futuro
-// Local
-// -> Datos locales de la tienda para el proyecto a futuro
+// GET = Consultar
+// POST = Annadir
+// POST = Modificar
+// POST = Eliminar
+Route::get("categorias/get",[ProductoController::class,"getCategorias"]); // Temporal para Prueba Inicial
+
+// Venta
+// GET = Consultar
+// POST = Annadir
+// POST = Anular
+// GET = Informe Ventas --> Periodo de ventas. Transformar informe a pdf
+
+// Detalle de Venta
+// GET = Consultar
+// POST = Annadir
+// POST = Anular
+// GET = Informe Ventas --> Periodo de Ventas - detalle. Transformar informe a pdf
+
+// Locales
+// GET = Consultar
+// POST = Annadir
+// POST = Modificar
+// POST = Eliminar

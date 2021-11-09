@@ -9,7 +9,7 @@ class Proveedor extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $table = "proveedores";
+    protected $table = "Proveedores";
 
     public function empresa(){
         return $this->belongsTo("App\Models\Empresa","id_empresa");

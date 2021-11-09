@@ -23,7 +23,7 @@ class CreateTableDetVentas extends Migration
 
             //$table->primary("num_venta"); Se supone que se define solo, si?
             $table->foreign("cod_producto")->references("cod_producto")->on("productos")->onDelete("cascade");
-            $table->timestamps();
+            $table->timestamps(); //cambiar a la tabla Ventas mas adelante
         });
     }
 

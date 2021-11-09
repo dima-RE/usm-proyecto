@@ -36,7 +36,7 @@ document.querySelector("#btn-agregar").addEventListener("click", async()=>{
     let stock = document.querySelector("#txt-stock").value.trim();
     // Windows esta con problemas, no me dejo cambiar el idioma del teclado y quedo en ingles por el momento.
     let errores = [];
-    if(isNaN(codigo)){
+    if(isNaN(parseInt(codigo))){
         errores.push("Debe ingresar el codigo numerico del producto.");
     }else{
         let codes = await getProductos();
@@ -48,17 +48,17 @@ document.querySelector("#btn-agregar").addEventListener("click", async()=>{
     if(nombre == ""){
         errores.push("Debe ingresar un nombre.");
     };
-    if(isNaN(precio)){
+    if(isNaN(parseInt(precio))){
         errores.push("Debe ingresar un precio.");
     }else if(precio < 0){
         errores.push("El precio no puede ser un valor negativo.")
     };
-    if(isNaN(critico)){
+    if(isNaN(parseInt(critico))){
         errores.push("El stock critico debe ser un valor numerico.")
     }else if(critico < 0){
         errores.push("El valor del stock critico no puede ser un numero negativo.")
     };
-    if(isNaN(stock)){
+    if(isNaN(parseInt(stock))){
         errores.push("El stock debe ser un valor numerico.")
     }else if(stock < 0){
         errores.push("El valor del stock no puede ser un numero negativo.")
@@ -75,7 +75,7 @@ document.querySelector("#btn-agregar").addEventListener("click", async()=>{
         producto.stock = stock;
         
         let res = await postProducto(producto);
-        await Swal.fire("Registro exitoso","El producto ha sido registrado satisfactoriamente","success");
+        await Swal.fire("Registro exitoso","El producto ha sido registrado satisfactoriamente" + codigo + nombre + categoria + proveedor + precio + stock + critico,"success");
     }else{
         Swal.fire({
             title: 'Errores de validacion',
